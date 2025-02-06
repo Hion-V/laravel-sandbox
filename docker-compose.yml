@@ -15,7 +15,7 @@ services:
     ports:
       - 9000:9000
     volumes:
-      - ./laravel:/var/www
+      - ./app:/var/www
       - ./.env:/var/www/.env
       - ./config/php/local.ini:/usr/local/etc/php/conf.d/local.ini
     networks:
