@@ -21,6 +21,8 @@ docker run --rm -v $(pwd)/app:/app composer install
 Start stack en genereer key
 
 ```bash
+# Uncomment de volgende regel om de webserver achter een reverseproxy te gebruiken
+# docker compose -f ./docker-compose.proxy.yml -f ./docker-compose.yml up -d
 docker compose up -d
 docker compose exec app php artisan key:generate
 ```
