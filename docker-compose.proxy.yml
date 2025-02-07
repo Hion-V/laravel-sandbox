@@ -1,0 +1,12 @@
+services: 
+  webserver:
+    extends: 
+      file: ./docker-compose.yml
+      service: webserver
+    networks: 
+      - proxynet
+
+networks:
+  proxynet:
+    name: ${PROXY_NETWORK_NAME}
+    external: true
